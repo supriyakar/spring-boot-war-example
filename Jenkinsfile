@@ -19,7 +19,10 @@ pipeline {
                 
             }
             post{
-                archiveArtifacts artifacts: '**/*.war'
+                success{
+                    archiveArtifacts artifacts: '**/*.war'
+                }
+                
             }
             
         }
